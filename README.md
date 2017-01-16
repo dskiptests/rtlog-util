@@ -21,8 +21,3 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image below is a screen shot from the desktop application.
 
 ![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px} )
-
-
-
-### Import RTLog Util
-
