@@ -1,3 +1,5 @@
+![RTLog Developer](http://i.imgur.com/T4w7YuD.png)
+
 # RTLog Util
 A small and simple library for handling data in RTLog format. Made for handling Retail Sales Audit data. Supports FHEAD, THEAD, TITEM, IGTAX, IDISC, TTEND, TTAIL, TOTAL, DCLOSE and FTAIL records.
 
