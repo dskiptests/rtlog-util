@@ -5,14 +5,10 @@ A small and simple library for handling data in RTLog format. Made for handling 
 
 RTLog Util can be imported to an existing project or used directly in a terminal, with och without a graphical user interface.
 
-### Run RTLog Developer
+### Run RTLog Developer Desktop 
+Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-to-rtlog-file>`
 
- 1. Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-to-rtlog-file>`
- 2. Run with GUI: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper GUI`
- 
-![RTLog Developer](http://i.imgur.com/BPloDRD.png  =250x)
-
-#### OPTIONS
+##### OPTIONS
 
 * `--print` Prints the RTLog file as Json to std. out.
 * `--findField <field>` Prints out all values of field `<field>`.
@@ -20,6 +16,13 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 * `--fields <record>` Prints out all fields for a given record.
 * `--diff <path-to-file>` Prints out all fields and values for the fields that differs between the two files.
 * `--modify <line-sequence> <field> <new-value>` Creates a copy of the file with updated value. Changes the value of field `<field>` on line `<line-sequence>` 
+
+### Run RTLog Developer Desktop 
+Download the `.jar` file called `rtlog-developer-0.1.0` and dubble click on the icon. The image below is a screen shot from the desktop application.
+
+![RTLog Developer](http://i.imgur.com/BPloDRD.png  =250x)
+
+
 
 ### Import RTLog Util
 
