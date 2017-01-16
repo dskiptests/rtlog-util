@@ -5,8 +5,8 @@ A small and simple library for handling data in RTLog format. Made for handling 
 
 RTLog Util can be imported to an existing project or used directly in a terminal, with och without a graphical user interface.
 
-### Run RTLog Developer Desktop 
-Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-to-rtlog-file>`
+### Run RTLog Developer
+`> java -cp rtlog_developer-0.1.0.jar RTLogDeveloper <path-to-rtlog-file>`
 
 ##### OPTIONS
 
@@ -17,7 +17,7 @@ Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-t
 * `--diff <path-to-file>` Prints out all fields and values for the fields that differs between the two files.
 * `--modify <line-sequence> <field> <new-value>` Creates a copy of the file with updated value. Changes the value of field `<field>` on line `<line-sequence>` 
 
-### Run RTLog Developer Desktop 
+### Run RTLog Developer Desktop version
 Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image below is a screen shot from the desktop application.
 
 ![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px} )
