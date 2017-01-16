@@ -1,4 +1,4 @@
-![RTLog Developer](http://i.imgur.com/BPloDRD.png)
+
 
 # RTLog Util
 A small and simple library for handling data in RTLog format. Made for handling Retail Sales Audit data. Supports FHEAD, THEAD, TITEM, IGTAX, IDISC, TTEND, TTAIL, TOTAL, DCLOSE and FTAIL records.
@@ -9,7 +9,8 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 
  1. Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-to-rtlog-file>`
  2. Run with GUI: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper GUI`
-
+ 
+![RTLog Developer](http://i.imgur.com/BPloDRD.png  =250x)
 
 #### OPTIONS
 
