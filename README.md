@@ -18,7 +18,7 @@ Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-t
 * `--modify <line-sequence> <field> <new-value>` Creates a copy of the file with updated value. Changes the value of field `<field>` on line `<line-sequence>` 
 
 ### Run RTLog Developer Desktop 
-Download the `.jar` file called `rtlog-developer-0.1.0` and dubble click on the icon. The image below is a screen shot from the desktop application.
+Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image below is a screen shot from the desktop application.
 
 ![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px} )
 
