@@ -20,7 +20,7 @@ Run in unix terminal: `> java -cp rtlog_developer-1.0.jar RTLogDeveloper <path-t
 ### Run RTLog Developer Desktop 
 Download the `.jar` file called `rtlog-developer-0.1.0` and dubble click on the icon. The image below is a screen shot from the desktop application.
 
-![RTLog Developer](http://i.imgur.com/BPloDRD.png  =150x)
+![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px} )
 
 
 
