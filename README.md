@@ -31,10 +31,6 @@ Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image bel
 #### In terminal
 `$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper gui`
 
-####GUI of version 0.1.0
-
-
-![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px})
 
 ##Build
 
