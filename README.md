@@ -10,7 +10,7 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 #### In terminal
 `$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper <path-to-rtlog-file>`
 
-####Run with Maven
+####With Maven
 `$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="<path-to-rtlog-file>"`
 
 ##### OPTIONS
@@ -43,4 +43,4 @@ Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image bel
 
 ##Change log
 
- * **`version 0.1.1`** Added options to get error logs from RTLog Util. In desktop version, you can access the error logs with the button _Error log_.
+ * 2017-03-16: **`version 0.1.1`** Added options to get error logs from RTLog Util. In desktop version, you can access the error logs with the button _Error log_.
