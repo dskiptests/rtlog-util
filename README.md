@@ -10,7 +10,7 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 #### In terminal
 `$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper <path-to-rtlog-file>`
 
-####With Maven
+#### With Maven
 `$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="<path-to-rtlog-file>"`
 
 ##### OPTIONS
@@ -25,22 +25,21 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 ## Run RTLog Developer Desktop version
 Download `rtlog-developer-0.1.1.jar` and dubble click on the icon. The image below is a screen shot from the desktop application. You can also run the desktop version with a shell or with Maven, se details below.
 
-####With Maven
+#### With Maven
 `$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="gui"`
 
 #### In terminal
 
-`$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="gui"`
+`$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper gui` 
 
-
-##Build
+## Build
 
 `$ mvn compile`
 
-###Build executable jar
+### Build executable jar
 
 `$ mvn clean compile assembly:single` 
 
-##Change log
+## Change log
 
  * **2017-03-16** `version 0.1.1` Added options to get error logs from RTLog Util. In desktop version, you can access the error logs with the button _Error log_.
