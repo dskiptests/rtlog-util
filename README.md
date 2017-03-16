@@ -43,4 +43,4 @@ Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image bel
 
 ##Change log
 
- * 2017-03-16: **`version 0.1.1`** Added options to get error logs from RTLog Util. In desktop version, you can access the error logs with the button _Error log_.
+ * **2017-03-16** `version 0.1.1` Added options to get error logs from RTLog Util. In desktop version, you can access the error logs with the button _Error log_.
