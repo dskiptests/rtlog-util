@@ -29,7 +29,7 @@ Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image bel
 `$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="gui"`
 
 #### In terminal
-`$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper gui`
+`$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper gui`. 
 
 
 ##Build
