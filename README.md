@@ -5,8 +5,13 @@ A small and simple library for handling data in RTLog format. Made for handling 
 
 RTLog Util can be imported to an existing project or used directly in a terminal, with och without a graphical user interface.
 
-### Run RTLog Developer
-`> java -cp rtlog_developer-0.1.0.jar RTLogDeveloper <path-to-rtlog-file>`
+## Run RTLog Developer
+
+#### In terminal
+`$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper <path-to-rtlog-file>`
+
+####Run with Maven
+`$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="<path-to-rtlog-file>"`
 
 ##### OPTIONS
 
@@ -17,7 +22,25 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 * `--diff <path-to-file>` Prints out all fields and values for the fields that differs between the two files.
 * `--modify <line-sequence> <field> <new-value>` Creates a copy of the file with updated value. Changes the value of field `<field>` on line `<line-sequence>` 
 
-### Run RTLog Developer Desktop version
-Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image below is a screen shot from the desktop application.
+## Run RTLog Developer Desktop version
+Download `rtlog-developer-0.1.0.jar` and dubble click on the icon. The image below is a screen shot from the desktop application. You can also run the desktop version with a shell or with Maven, se details below.
 
-![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px} )
+####With Maven
+`$ mvn exec:java -Dexec.mainClass="RTLogDeveloperApplication" -Dexec.args="gui"`
+
+#### In terminal
+`$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper gui`
+
+####GUI of version 0.1.0
+![RTLog Developer](http://i.imgur.com/BPloDRD.png  {width=150px})
+
+##Build
+
+`$ mvn compile`
+
+###Build executable jar
+`$ mvn clean compile assembly:single` 
+
+##Change log
+
+ * **`version 0.1.1`** Added options to get error logs from RTLog Util. In desktop version, you can access the error logs with the button _Error log_.

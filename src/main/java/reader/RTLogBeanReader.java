@@ -1,5 +1,6 @@
 package reader;
 
+import exception.ExceptionWrapper;
 import model.*;
 import model.handler.BigDecimalHandler;
 import model.handler.BusinessDateHandler;
@@ -15,11 +16,14 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 public class RTLogBeanReader {
 
     private final static String name = "Elvis";
+    private ArrayList<ExceptionWrapper> logger;
+    private String currentRow;
 
     public RTLogBeanReader() {
 
@@ -63,25 +67,36 @@ public class RTLogBeanReader {
                 .addTypeHandler("BigDecimalHandler", new BigDecimalHandler())
                 .addRecord(record));
         Unmarshaller unmarshaller = factory.createUnmarshaller(name);
-        T tRecord = (T) unmarshaller.unmarshal(data);
-
-        return tRecord;
+        return (T) unmarshaller.unmarshal(data);
     }
 
-    private void printTHEAD(TransactionHeader transactionHeader) {
-        System.out.println("hek");
-        System.out.println(transactionHeader.getSequence() + " " + transactionHeader.getRecord());
-    }
+
 
 
     public List<RTLogRecord> read(String text) {
+        this.currentRow = null;
+        logger = new ArrayList<ExceptionWrapper>();
         List<RTLogRecord> records = new ArrayList<>();
         try (Stream<String> stream = Arrays.stream(text.split("\n"))) {
-            stream.map(this::mapToRecord)
+            stream.map(this::setCurrentRow)
+                    .map(this::mapToRecord)
                     .forEach(records::add);
         } catch (Exception e) {
+            this.logger.add(new ExceptionWrapper(e, currentRow));
             e.printStackTrace();
         }
         return records;
+    }
+
+    private String setCurrentRow(String r) {
+        this.currentRow = r;
+        return r;
+    }
+
+    public List<ExceptionWrapper> getLog() {
+        if(Objects.isNull(this.logger)) {
+            this.logger = new ArrayList<>();
+        }
+        return this.logger;
     }
 }

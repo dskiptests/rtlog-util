@@ -2,6 +2,7 @@ package util;
 
 import dto.DiffResult;
 import dto.SearchResult;
+import exception.ExceptionWrapper;
 import exception.RTLogUtilException;
 import model.*;
 import reader.JsonSerializer;
@@ -170,5 +171,9 @@ public class RTLogUtil {
             }
         }
         return diffs;
+    }
+
+    public List<ExceptionWrapper> getLog() {
+        return reader.getLog();
     }
 }

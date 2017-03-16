@@ -21,6 +21,7 @@ import java.util.List;
 
 public class RTLogDeveloperGUI extends JFrame {
 
+    public static final String VERSION = "version 0.1.1";
     private final RTLogUtil util;
     private JTextArea output;
     private JTextArea input;
@@ -60,7 +61,7 @@ public class RTLogDeveloperGUI extends JFrame {
         try {
             BufferedImage image = ImageIO.read(getClass().getClassLoader().getResource("rtlog_dev.png"));
             JLabel picLabel = new JLabel(new ImageIcon(image));
-            picLabel.setBorder (new TitledBorder(new EtchedBorder(), "version 0.1.0"));
+            picLabel.setBorder (new TitledBorder(new EtchedBorder(), VERSION));
             upperPanel.add(picLabel);
             upperPanel.repaint();
         } catch (Exception e) {
@@ -89,6 +90,7 @@ public class RTLogDeveloperGUI extends JFrame {
         addDiffButton(searchPanel);
         addFindContentButton(searchPanel);
         addFieldsButton(searchPanel);
+        addLoggButton(searchPanel);
         createTextArea(searchPanel, searchInput);
         addCleanButton(searchPanel);
         addHelpButton(searchPanel);
@@ -228,6 +230,17 @@ public class RTLogDeveloperGUI extends JFrame {
                 List<SearchResult> field = util.findField(searchInput.getText(), records);
 
                 output.setText(util.toJson(field));
+            }
+        });
+        upperPanel.add(button);
+    }
+
+    private void addLoggButton(JPanel upperPanel) {
+        JButton button = new JButton("Error Log");
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                output.setText(util.toJson(util.getLog()));
             }
         });
         upperPanel.add(button);
