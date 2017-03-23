@@ -1,8 +1,6 @@
 
 
 # RTLog Util
-_The de facto standard application for RTLog management._
-
 A small and simple library for handling data in RTLog format. Made for handling Retail Sales Audit data. Supports FHEAD, THEAD, TITEM, IGTAX, IDISC, TTEND, TTAIL, TOTAL, DCLOSE and FTAIL records.
 
 RTLog Util can be imported to an existing project or used directly in a terminal, with och without a graphical user interface.
@@ -12,9 +10,9 @@ Jar can be downloaded from the `jars/` directory or built with Maven.
 ##### Maven
 ```XML
 <dependency>
-	<groupId>com.github.davstromb</groupId>
-	<artifactId>rtlog-util</artifactId>
-	<version>0.1.1</version>
+  <groupId>com.github.davstromb</groupId>
+  <artifactId>rtlog-util</artifactId>
+  <version>0.1.1</version>
 </dependency>
 ```
 ##### Gradle
