@@ -22,6 +22,14 @@
     <description>A utility tool for handling RTLog data.</description>
     <url>https://github.com/davstromb/rtlog-util</url>
 
+    <developers>
+        <developer>
+            <id>davstromb</id>
+            <name>David Stromberg</name>
+            <email>davstromb@gmail.com</email>
+        </developer>
+    </developers>
+
     <licenses>
         <license>
             <name>GNU General Public License version 3</name>
@@ -36,10 +44,21 @@
 
     <distributionManagement>
         <repository>
-            <id>sonatype</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>gpg</id>
+            <properties>
+                <gpg.passphrase>your passphrase</gpg.passphrase>
+                <gpg.keyname>your pgp key</gpg.keyname>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -141,6 +160,18 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
 
             <plugin>

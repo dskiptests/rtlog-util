@@ -7,7 +7,36 @@ A small and simple library for handling data in RTLog format. Made for handling 
 
 RTLog Util can be imported to an existing project or used directly in a terminal, with och without a graphical user interface.
 
-## Run RTLog Developer
+#### Import in project
+Jar can be downloaded from the `jars/` directory or built with Maven.
+##### Maven
+```XML
+<dependency>
+	<groupId>com.github.davstromb</groupId>
+	<artifactId>rtlog-util</artifactId>
+   <version>0.1.1</version>
+</dependency>
+```
+##### Gradle
+```Groovy
+compile "com.github.davstromb:rtlog-util:0.1.1"
+```
+
+#### Example
+```Java
+RTLogUtil util = new RTLogUtil();
+List<RTLogRecord> rtLogRecords = util.parseFile(Paths.get("<path-to-rtlog-file>"));
+String rtlogAsJson = util.toJson(rtLogRecords);
+```
+#### Build
+
+`$ mvn compile`
+
+##### Build executable jar
+
+`$ mvn clean compile assembly:single` 
+
+## Run RTLog Developer Standalone Application
 
 #### In terminal
 `$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper <path-to-rtlog-file>`
@@ -24,7 +53,7 @@ RTLog Util can be imported to an existing project or used directly in a terminal
 * `--diff <path-to-file>` Prints out all fields and values for the fields that differs between the two files.
 * `--modify <line-sequence> <field> <new-value>` Creates a copy of the file with updated value. Changes the value of field `<field>` on line `<line-sequence>` 
 
-## Run RTLog Developer Desktop version
+## Run RTLog Developer Desktop Application
 Download `rtlog-developer-0.1.1.jar` and dubble click on the icon. The image below is a screen shot from the desktop application. You can also run the desktop version with a shell or with Maven, se details below.
 
 
@@ -38,13 +67,7 @@ Download `rtlog-developer-0.1.1.jar` and dubble click on the icon. The image bel
 
 `$ java -cp rtlog_developer-0.1.0.jar RTLogDeveloper gui` 
 
-## Build
 
-`$ mvn compile`
-
-### Build executable jar
-
-`$ mvn clean compile assembly:single` 
 
 ## Change log
 
