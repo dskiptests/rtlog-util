@@ -14,7 +14,7 @@ Jar can be downloaded from the `jars/` directory or built with Maven.
 <dependency>
 	<groupId>com.github.davstromb</groupId>
 	<artifactId>rtlog-util</artifactId>
-   <version>0.1.1</version>
+	<version>0.1.1</version>
 </dependency>
 ```
 ##### Gradle
